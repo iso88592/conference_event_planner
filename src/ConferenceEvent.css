@@ -156,7 +156,7 @@
   .display_box1 {
     margin-top: 20px;
     overflow-y: auto;
-    height: 300px;
+    min-height: 300px;
     scrollbar-width: thin;
     scrollbar-color: #b7b4b4 transparent; 
   }
@@ -219,32 +219,30 @@
     font-size: 20px;
   }
   .table_item_data {
-    width: 70vw;
+    width: 100%;
     border-collapse: collapse;
-    margin-left: -6px;
-    
   }
-  
+
   .table_item_data th,
   .table_item_data td {
-    padding: 8px;
+    padding: clamp(4px, 1vw, 8px);
     border: 1px solid #ddd;
-    font-size: 23px;
-    
+    font-size: clamp(14px, 2vw, 23px);
+    word-break: break-word;
   }
-  
+
   .table_item_data th {
     background-color: #f2f2f2;
   }
-  
+
   .table_item_data tbody tr:nth-child(even) {
     background-color: #f9f9f9;
   }
-  
+
   .table_item_data tbody tr:hover {
     background-color: #f2f2f2;
   }
-  
+
   .table_item_data tbody tr:first-child:hover {
     background-color: transparent;
   }

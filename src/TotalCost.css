@@ -1,11 +1,13 @@
 .pricing-app {
  margin-top: 20px;
- /* margin-left: 40vw; */
  width: 100vw;
  height: 100vh;
+
  display: flex;
  align-items: center;
  justify-content: center;
+ padding: 20px;
+ box-sizing: border-box;
 }
 
 
@@ -17,8 +19,9 @@
   background-color: white;
   color: #333;
   margin: 0;
-  padding: 55px;
-  width: 80vw;
+  padding: clamp(20px, 5vw, 55px);
+  width: 100%;
+  max-width: 1200px;
 }
 
 
@@ -27,14 +30,17 @@
   text-transform: uppercase;
   line-height: 1;
   margin: 0;
-  /* padding: 0 0 10px; */
-  font-size: 25px;
+  font-size: clamp(16px, 3vw, 25px);
 }
 
 .pricing-app h2 {
-  font-size: 60px;
+  font-size: clamp(30px, 8vw, 60px);
 }
 
 .right {
   margin-right: 0;
+}
+
+.render_items {
+  overflow-x: auto;
 }
