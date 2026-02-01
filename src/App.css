@@ -55,17 +55,20 @@
 
 .main_event {
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(7px);
-  gap: 100px;
+  gap: clamp(20px, 5vw, 100px);
+  padding: 20px;
   background-color: rgba(51, 61, 80, 0.7);
 }
 
 .aboutus_main {
-  width: 800px;
+  max-width: 800px;
+  width: 100%;
   color: white;
   /* background-color: rgba(0,0,0,0.1); */
 
@@ -92,20 +95,22 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .first_page_name_btn h1 {
-  font-size: 45px;
+  font-size: clamp(24px, 5vw, 45px);
   text-align: center;
 }
 
 .first_page_name_btn p {
-  font-size: 26px;
+  font-size: clamp(16px, 3vw, 26px);
 }
 
 .event-list-container {
-  position: absolute;
+  position: fixed;
   overflow-x: hidden;
   top: 100vh;
   left: 0;
